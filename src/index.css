@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-inter bg-warm-50 text-warm-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair font-bold;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-fiery text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-gold transform hover:scale-105 transition-all duration-300 animate-fade-up;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-gold-600 text-gold-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gold-600 hover:text-white transition-all duration-300;
+  }
+  
+  .btn-gold {
+    @apply bg-gradient-gold text-primary-900 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-warm transform hover:scale-105 transition-all duration-300;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-card overflow-hidden;
+  }
+  
+  .nav-link {
+    @apply text-warm-700 hover:text-primary-900 font-medium transition-colors duration-200;
+  }
+  
+  .nav-link-active {
+    @apply text-primary-900 font-semibold;
+  }
+  
+  .section-title {
+    @apply font-playfair text-4xl md:text-5xl font-bold text-primary-900;
+  }
+  
+  .text-gradient-gold {
+    @apply bg-gradient-gold bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-fiery {
+    @apply bg-gradient-fiery bg-clip-text text-transparent;
+  }
+  
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gold-100 text-gold-800;
+  }
+  
+  .badge-primary {
+    @apply bg-primary-100 text-primary-800;
+  }
+  
+  .phone-link {
+    @apply text-primary-900 hover:text-primary-700 font-bold text-xl transition-colors duration-200;
+  }
+  
+  .dotted-leader {
+    @apply border-b border-dotted border-warm-300 flex-1 mx-4;
+  }
+  
+  .menu-item {
+    @apply flex items-center justify-between py-3 border-b border-warm-100 last:border-b-0;
+  }
+  
+  .menu-item-name {
+    @apply font-medium text-warm-900;
+  }
+  
+  .menu-item-price {
+    @apply font-bold text-primary-900 ml-4;
+  }
+  
+  .menu-item-description {
+    @apply text-sm text-warm-600 mt-1;
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .bg-overlay-dark {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+  }
+  
+  .bg-overlay-light {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9));
+  }
+  
+  .hover-lift {
+    @apply transform hover:scale-105 transition-transform duration-300;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
